@@ -1,0 +1,80 @@
+
+
+
+
+entity ACCENTIDADDF {
+IDENTIDAD	Long,
+NOMBRE	String,
+FECHACONSTITUCION	LocalDate,
+FECHAEXTINCION	LocalDate,
+DOMICILIO	String,
+CODIGOPOSTAL	String,
+TELEFONO	String,
+EMAIL	String,
+DEU	String,
+FECHAALTAAPP	LocalDate,
+FECHABAJAAPP	LocalDate,
+FECHAALTACENSO	LocalDate,
+FECHABAJACENSO	LocalDate,
+NUMEROVERSION	Long,
+FECHAVERSION	LocalDate
+}
+
+entity ACCENTIDADDVT {
+IDENTIDAD	Long,
+NUMEROVERSION	Long,
+FECHAVERSION	Long,
+NIF	String,
+EJERCICIO		Long,
+IDTIPO	CHAR,
+IDTIPOREND	CHAR,
+IDUNIP		Long,
+IDMUNICIPIO		Long,
+IDPROVINCIA		Long,
+IDISLA		Long,
+LOCAL	CHAR,
+IDESTADOACTIVIDAD		Long,
+CNAE	String,
+CODIGOMAP	String,
+CODIGOMEH	String
+}
+relationship OneToMany {
+	ACCENTIDADDVT to ACCENTIDADDF{IDENTIDAD}
+}
+
+entity ACCENTIDADPERSONA {
+  IDENTIDAD	String,
+  IDCARGO	String,
+  NIF	String,
+  NOMBRE	String,
+  APELLIDO1	String,
+  APELLIDO2	String,
+EMAIL	String
+}
+relationship OneToMany {
+	ACCENTIDADPERSONA to ACCENTIDADDF{IDENTIDAD}
+}
+// an ignored comment
+/** not an ignored comment */
+entity DCCCARGOENTIDAD {
+	IDCARGO	Long,
+	NOMBRE	String
+}
+relationship OneToMany {
+	ACCENTIDADPERSONA to DCCCARGOENTIDAD{IDCARGO}
+}
+
+
+
+// Set pagination options
+paginate DCCCARGOENTIDAD with infinite-scroll
+paginate ACCENTIDADPERSONA with pagination
+
+// Use Data Transfert Objects (DTO)
+// dto * with mapstruct
+
+// Set service options to all except few
+//service all with serviceImpl except Employee, Job
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
