@@ -1,0 +1,160 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-accentidaddf-heading">Create or edit a ACCENTIDADDF</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_iDENTIDAD">I DENTIDAD</label>
+                    <input type="number" class="form-control" name="iDENTIDAD" id="field_iDENTIDAD"
+                           formControlName="iDENTIDAD"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_nOMBRE">N OMBRE</label>
+                    <input type="text" class="form-control" name="nOMBRE" id="field_nOMBRE"
+                           formControlName="nOMBRE"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_fECHACONSTITUCION">F ECHACONSTITUCION</label>
+                    <div class="input-group">
+                        <input id="field_fECHACONSTITUCION" type="text" class="form-control" name="fECHACONSTITUCION" ngbDatepicker #fECHACONSTITUCIONDp="ngbDatepicker" formControlName="fECHACONSTITUCION"/>
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="fECHACONSTITUCIONDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_fECHAEXTINCION">F ECHAEXTINCION</label>
+                    <div class="input-group">
+                        <input id="field_fECHAEXTINCION" type="text" class="form-control" name="fECHAEXTINCION" ngbDatepicker #fECHAEXTINCIONDp="ngbDatepicker" formControlName="fECHAEXTINCION"/>
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="fECHAEXTINCIONDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_dOMICILIO">D OMICILIO</label>
+                    <input type="text" class="form-control" name="dOMICILIO" id="field_dOMICILIO"
+                           formControlName="dOMICILIO"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_cODIGOPOSTAL">C ODIGOPOSTAL</label>
+                    <input type="text" class="form-control" name="cODIGOPOSTAL" id="field_cODIGOPOSTAL"
+                           formControlName="cODIGOPOSTAL"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_tELEFONO">T ELEFONO</label>
+                    <input type="text" class="form-control" name="tELEFONO" id="field_tELEFONO"
+                           formControlName="tELEFONO"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_eMAIL">E MAIL</label>
+                    <input type="text" class="form-control" name="eMAIL" id="field_eMAIL"
+                           formControlName="eMAIL"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_dEU">D EU</label>
+                    <input type="text" class="form-control" name="dEU" id="field_dEU"
+                           formControlName="dEU"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_fECHAALTAAPP">F ECHAALTAAPP</label>
+                    <div class="input-group">
+                        <input id="field_fECHAALTAAPP" type="text" class="form-control" name="fECHAALTAAPP" ngbDatepicker #fECHAALTAAPPDp="ngbDatepicker" formControlName="fECHAALTAAPP"/>
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="fECHAALTAAPPDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_fECHABAJAAPP">F ECHABAJAAPP</label>
+                    <div class="input-group">
+                        <input id="field_fECHABAJAAPP" type="text" class="form-control" name="fECHABAJAAPP" ngbDatepicker #fECHABAJAAPPDp="ngbDatepicker" formControlName="fECHABAJAAPP"/>
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="fECHABAJAAPPDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_fECHAALTACENSO">F ECHAALTACENSO</label>
+                    <div class="input-group">
+                        <input id="field_fECHAALTACENSO" type="text" class="form-control" name="fECHAALTACENSO" ngbDatepicker #fECHAALTACENSODp="ngbDatepicker" formControlName="fECHAALTACENSO"/>
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="fECHAALTACENSODp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_fECHABAJACENSO">F ECHABAJACENSO</label>
+                    <div class="input-group">
+                        <input id="field_fECHABAJACENSO" type="text" class="form-control" name="fECHABAJACENSO" ngbDatepicker #fECHABAJACENSODp="ngbDatepicker" formControlName="fECHABAJACENSO"/>
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="fECHABAJACENSODp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_nUMEROVERSION">N UMEROVERSION</label>
+                    <input type="number" class="form-control" name="nUMEROVERSION" id="field_nUMEROVERSION"
+                           formControlName="nUMEROVERSION"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_fECHAVERSION">F ECHAVERSION</label>
+                    <div class="input-group">
+                        <input id="field_fECHAVERSION" type="text" class="form-control" name="fECHAVERSION" ngbDatepicker #fECHAVERSIONDp="ngbDatepicker" formControlName="fECHAVERSION"/>
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="fECHAVERSIONDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_iDENTIDAD">I DENTIDAD</label>
+                    <select class="form-control" id="field_iDENTIDAD" name="iDENTIDAD" formControlName="iDENTIDAD">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="aCCENTIDADDVTOption.id === editForm.get('iDENTIDAD')!.value?.id ? editForm.get('iDENTIDAD')!.value : aCCENTIDADDVTOption" *ngFor="let aCCENTIDADDVTOption of accentidaddvts; trackBy: trackById">{{ aCCENTIDADDVTOption.id }}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_iDENTIDAD">I DENTIDAD</label>
+                    <select class="form-control" id="field_iDENTIDAD" name="iDENTIDAD" formControlName="iDENTIDAD">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="aCCENTIDADPEROption.id === editForm.get('iDENTIDAD')!.value?.id ? editForm.get('iDENTIDAD')!.value : aCCENTIDADPEROption" *ngFor="let aCCENTIDADPEROption of accentidadpers; trackBy: trackById">{{ aCCENTIDADPEROption.id }}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

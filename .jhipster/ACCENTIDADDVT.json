@@ -1,0 +1,88 @@
+{
+    "name": "ACCENTIDADDVT",
+    "fields": [
+        {
+            "fieldName": "iDENTIDAD",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "nUMEROVERSION",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "fECHAVERSION",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "nIF",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "eJERCICIO",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "iDTIPO",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "iDTIPOREND",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "iDUNIP",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "iDMUNICIPIO",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "iDPROVINCIA",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "iDISLA",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "lOCAL",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "iDESTADOACTIVIDAD",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "cNAE",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "cODIGOMAP",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "cODIGOMEH",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "aCCENTIDADDF",
+            "otherEntityRelationshipName": "iDENTIDAD",
+            "relationshipName": "aCCENTIDADDF"
+        }
+    ],
+    "changelogDate": "20200407195900",
+    "entityTableName": "accentidaddvt",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

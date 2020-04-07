@@ -1,0 +1,92 @@
+{
+    "name": "ACCENTIDADDF",
+    "fields": [
+        {
+            "fieldName": "iDENTIDAD",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "nOMBRE",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "fECHACONSTITUCION",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "fECHAEXTINCION",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "dOMICILIO",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "cODIGOPOSTAL",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "tELEFONO",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "eMAIL",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "dEU",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "fECHAALTAAPP",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "fECHABAJAAPP",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "fECHAALTACENSO",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "fECHABAJACENSO",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "nUMEROVERSION",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "fECHAVERSION",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "aCCENTIDADDVT",
+            "otherEntityRelationshipName": "aCCENTIDADDF",
+            "relationshipName": "iDENTIDAD",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "aCCENTIDADPER",
+            "otherEntityRelationshipName": "aCCENTIDADDF",
+            "relationshipName": "iDENTIDAD",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200407195800",
+    "entityTableName": "accentidaddf",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}
