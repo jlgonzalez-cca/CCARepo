@@ -1,0 +1,58 @@
+{
+    "name": "ACCENTIDADPER",
+    "fields": [
+        {
+            "fieldName": "iDENTIDAD",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "iDCARGO",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nIF",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nOMBRE",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "aPELLIDO1",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "aPELLIDO2",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "eMAIL",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "aCCENTIDADDF",
+            "otherEntityRelationshipName": "iDENTIDAD",
+            "relationshipName": "aCCENTIDADDF"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "dCCCARGOENT",
+            "otherEntityRelationshipName": "iDCARGO",
+            "relationshipName": "dCCCARGOENT"
+        }
+    ],
+    "changelogDate": "20200407200000",
+    "entityTableName": "accentidadper",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

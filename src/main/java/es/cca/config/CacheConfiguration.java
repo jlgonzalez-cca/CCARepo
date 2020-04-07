@@ -40,6 +40,13 @@ public class CacheConfiguration {
             createCache(cm, es.cca.domain.User.class.getName());
             createCache(cm, es.cca.domain.Authority.class.getName());
             createCache(cm, es.cca.domain.User.class.getName() + ".authorities");
+            createCache(cm, es.cca.domain.ACCENTIDADDF.class.getName());
+            createCache(cm, es.cca.domain.ACCENTIDADDVT.class.getName());
+            createCache(cm, es.cca.domain.ACCENTIDADDVT.class.getName() + ".aCCENTIDADDFS");
+            createCache(cm, es.cca.domain.ACCENTIDADPER.class.getName());
+            createCache(cm, es.cca.domain.ACCENTIDADPER.class.getName() + ".aCCENTIDADDFS");
+            createCache(cm, es.cca.domain.ACCENTIDADPER.class.getName() + ".dCCCARGOENTS");
+            createCache(cm, es.cca.domain.DCCCARGOENT.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }
