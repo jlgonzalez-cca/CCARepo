@@ -1,0 +1,73 @@
+
+
+
+
+entity ACCENTIDADDF {
+IDENTIDAD	Long,
+NOMBRE	String,
+FECHACONSTITUCION	LocalDate,
+FECHAEXTINCION	LocalDate,
+DOMICILIO	String,
+CODIGOPOSTAL	String,
+TELEFONO	String,
+EMAIL	String,
+DEU	String,
+FECHAALTAAPP	LocalDate,
+FECHABAJAAPP	LocalDate,
+FECHAALTACENSO	LocalDate,
+FECHABAJACENSO	LocalDate,
+NUMEROVERSION	Long,
+FECHAVERSION	LocalDate
+}
+
+entity ACCENTIDADDVT {
+IDENTIDAD	Long,
+NUMEROVERSION	Long,
+FECHAVERSION	Long,
+NIF	String,
+EJERCICIO		Long,
+IDTIPO	String,
+IDTIPOREND	String,
+IDUNIP		Long,
+IDMUNICIPIO		Long,
+IDPROVINCIA		Long,
+IDISLA		Long,
+LOCAL	String,
+IDESTADOACTIVIDAD		Long,
+CNAE	String,
+CODIGOMAP	String,
+CODIGOMEH	String
+}
+
+
+entity ACCENTIDADPER {
+  IDENTIDAD	Long,
+  IDCARGO	Long,
+  NIF	String,
+  NOMBRE	String,
+  APELLIDO1	String,
+  APELLIDO2	String,
+EMAIL	String
+}
+
+// an ignored comment
+/** not an ignored comment */
+entity DCCCARGOENT {
+	IDCARGO	Long,
+	NOMBRE	String
+}
+
+
+
+// Set pagination options
+paginate DCCCARGOENT with infinite-scroll
+paginate ACCENTIDADPER,ACCENTIDADDF,ACCENTIDADDVT  with pagination
+
+// Use Data Transfert Objects (DTO)
+// dto * with mapstruct
+
+// Set service options to all except few
+//service all with serviceImpl except Employee, Job
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
