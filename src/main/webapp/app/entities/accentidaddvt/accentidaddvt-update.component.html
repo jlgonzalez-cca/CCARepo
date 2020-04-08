@@ -1,0 +1,122 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-accentidaddvt-heading">Create or edit a ACCENTIDADDVT</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_iDENTIDAD">I DENTIDAD</label>
+                    <input type="number" class="form-control" name="iDENTIDAD" id="field_iDENTIDAD"
+                           formControlName="iDENTIDAD"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_nUMEROVERSION">N UMEROVERSION</label>
+                    <input type="number" class="form-control" name="nUMEROVERSION" id="field_nUMEROVERSION"
+                           formControlName="nUMEROVERSION"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_fECHAVERSION">F ECHAVERSION</label>
+                    <input type="number" class="form-control" name="fECHAVERSION" id="field_fECHAVERSION"
+                           formControlName="fECHAVERSION"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_nIF">N IF</label>
+                    <input type="text" class="form-control" name="nIF" id="field_nIF"
+                           formControlName="nIF"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_eJERCICIO">E JERCICIO</label>
+                    <input type="number" class="form-control" name="eJERCICIO" id="field_eJERCICIO"
+                           formControlName="eJERCICIO"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_iDTIPO">I DTIPO</label>
+                    <input type="text" class="form-control" name="iDTIPO" id="field_iDTIPO"
+                           formControlName="iDTIPO"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_iDTIPOREND">I DTIPOREND</label>
+                    <input type="text" class="form-control" name="iDTIPOREND" id="field_iDTIPOREND"
+                           formControlName="iDTIPOREND"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_iDUNIP">I DUNIP</label>
+                    <input type="number" class="form-control" name="iDUNIP" id="field_iDUNIP"
+                           formControlName="iDUNIP"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_iDMUNICIPIO">I DMUNICIPIO</label>
+                    <input type="number" class="form-control" name="iDMUNICIPIO" id="field_iDMUNICIPIO"
+                           formControlName="iDMUNICIPIO"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_iDPROVINCIA">I DPROVINCIA</label>
+                    <input type="number" class="form-control" name="iDPROVINCIA" id="field_iDPROVINCIA"
+                           formControlName="iDPROVINCIA"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_iDISLA">I DISLA</label>
+                    <input type="number" class="form-control" name="iDISLA" id="field_iDISLA"
+                           formControlName="iDISLA"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_lOCAL">L OCAL</label>
+                    <input type="text" class="form-control" name="lOCAL" id="field_lOCAL"
+                           formControlName="lOCAL"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_iDESTADOACTIVIDAD">I DESTADOACTIVIDAD</label>
+                    <input type="number" class="form-control" name="iDESTADOACTIVIDAD" id="field_iDESTADOACTIVIDAD"
+                           formControlName="iDESTADOACTIVIDAD"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_cNAE">C NAE</label>
+                    <input type="text" class="form-control" name="cNAE" id="field_cNAE"
+                           formControlName="cNAE"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_cODIGOMAP">C ODIGOMAP</label>
+                    <input type="text" class="form-control" name="cODIGOMAP" id="field_cODIGOMAP"
+                           formControlName="cODIGOMAP"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_cODIGOMEH">C ODIGOMEH</label>
+                    <input type="text" class="form-control" name="cODIGOMEH" id="field_cODIGOMEH"
+                           formControlName="cODIGOMEH"/>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
