@@ -1,0 +1,98 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="aCCENTIDADDF">
+            <h2><span>ACCENTIDADDF</span> {{ aCCENTIDADDF.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span>I DENTIDAD</span></dt>
+                <dd>
+                    <span>{{ aCCENTIDADDF.iDENTIDAD }}</span>
+                </dd>
+                <dt><span>N OMBRE</span></dt>
+                <dd>
+                    <span>{{ aCCENTIDADDF.nOMBRE }}</span>
+                </dd>
+                <dt><span>F ECHACONSTITUCION</span></dt>
+                <dd>
+                    <span>{{ aCCENTIDADDF.fECHACONSTITUCION }}</span>
+                </dd>
+                <dt><span>F ECHAEXTINCION</span></dt>
+                <dd>
+                    <span>{{ aCCENTIDADDF.fECHAEXTINCION }}</span>
+                </dd>
+                <dt><span>D OMICILIO</span></dt>
+                <dd>
+                    <span>{{ aCCENTIDADDF.dOMICILIO }}</span>
+                </dd>
+                <dt><span>C ODIGOPOSTAL</span></dt>
+                <dd>
+                    <span>{{ aCCENTIDADDF.cODIGOPOSTAL }}</span>
+                </dd>
+                <dt><span>T ELEFONO</span></dt>
+                <dd>
+                    <span>{{ aCCENTIDADDF.tELEFONO }}</span>
+                </dd>
+                <dt><span>E MAIL</span></dt>
+                <dd>
+                    <span>{{ aCCENTIDADDF.eMAIL }}</span>
+                </dd>
+                <dt><span>D EU</span></dt>
+                <dd>
+                    <span>{{ aCCENTIDADDF.dEU }}</span>
+                </dd>
+                <dt><span>F ECHAALTAAPP</span></dt>
+                <dd>
+                    <span>{{ aCCENTIDADDF.fECHAALTAAPP }}</span>
+                </dd>
+                <dt><span>F ECHABAJAAPP</span></dt>
+                <dd>
+                    <span>{{ aCCENTIDADDF.fECHABAJAAPP }}</span>
+                </dd>
+                <dt><span>F ECHAALTACENSO</span></dt>
+                <dd>
+                    <span>{{ aCCENTIDADDF.fECHAALTACENSO }}</span>
+                </dd>
+                <dt><span>F ECHABAJACENSO</span></dt>
+                <dd>
+                    <span>{{ aCCENTIDADDF.fECHABAJACENSO }}</span>
+                </dd>
+                <dt><span>N UMEROVERSION</span></dt>
+                <dd>
+                    <span>{{ aCCENTIDADDF.nUMEROVERSION }}</span>
+                </dd>
+                <dt><span>F ECHAVERSION</span></dt>
+                <dd>
+                    <span>{{ aCCENTIDADDF.fECHAVERSION }}</span>
+                </dd>
+                <dt><span>I DENTIDAD</span></dt>
+                <dd>
+                    <div *ngIf="aCCENTIDADDF.iDENTIDAD">
+                        <a [routerLink]="['/accentidaddvt', aCCENTIDADDF.iDENTIDAD?.id, 'view']">{{ aCCENTIDADDF.iDENTIDAD?.id }}</a>
+                    </div>
+                </dd>
+                <dt><span>I DENTIDAD</span></dt>
+                <dd>
+                    <div *ngIf="aCCENTIDADDF.iDENTIDAD">
+                        <a [routerLink]="['/accentidadper', aCCENTIDADDF.iDENTIDAD?.id, 'view']">{{ aCCENTIDADDF.iDENTIDAD?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/accentidaddf', aCCENTIDADDF.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span>Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
