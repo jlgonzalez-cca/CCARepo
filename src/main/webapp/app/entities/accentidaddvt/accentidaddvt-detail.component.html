@@ -1,0 +1,90 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="aCCENTIDADDVT">
+            <h2><span>ACCENTIDADDVT</span> {{ aCCENTIDADDVT.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span>I DENTIDAD</span></dt>
+                <dd>
+                    <span>{{ aCCENTIDADDVT.iDENTIDAD }}</span>
+                </dd>
+                <dt><span>N UMEROVERSION</span></dt>
+                <dd>
+                    <span>{{ aCCENTIDADDVT.nUMEROVERSION }}</span>
+                </dd>
+                <dt><span>F ECHAVERSION</span></dt>
+                <dd>
+                    <span>{{ aCCENTIDADDVT.fECHAVERSION }}</span>
+                </dd>
+                <dt><span>N IF</span></dt>
+                <dd>
+                    <span>{{ aCCENTIDADDVT.nIF }}</span>
+                </dd>
+                <dt><span>E JERCICIO</span></dt>
+                <dd>
+                    <span>{{ aCCENTIDADDVT.eJERCICIO }}</span>
+                </dd>
+                <dt><span>I DTIPO</span></dt>
+                <dd>
+                    <span>{{ aCCENTIDADDVT.iDTIPO }}</span>
+                </dd>
+                <dt><span>I DTIPOREND</span></dt>
+                <dd>
+                    <span>{{ aCCENTIDADDVT.iDTIPOREND }}</span>
+                </dd>
+                <dt><span>I DUNIP</span></dt>
+                <dd>
+                    <span>{{ aCCENTIDADDVT.iDUNIP }}</span>
+                </dd>
+                <dt><span>I DMUNICIPIO</span></dt>
+                <dd>
+                    <span>{{ aCCENTIDADDVT.iDMUNICIPIO }}</span>
+                </dd>
+                <dt><span>I DPROVINCIA</span></dt>
+                <dd>
+                    <span>{{ aCCENTIDADDVT.iDPROVINCIA }}</span>
+                </dd>
+                <dt><span>I DISLA</span></dt>
+                <dd>
+                    <span>{{ aCCENTIDADDVT.iDISLA }}</span>
+                </dd>
+                <dt><span>L OCAL</span></dt>
+                <dd>
+                    <span>{{ aCCENTIDADDVT.lOCAL }}</span>
+                </dd>
+                <dt><span>I DESTADOACTIVIDAD</span></dt>
+                <dd>
+                    <span>{{ aCCENTIDADDVT.iDESTADOACTIVIDAD }}</span>
+                </dd>
+                <dt><span>C NAE</span></dt>
+                <dd>
+                    <span>{{ aCCENTIDADDVT.cNAE }}</span>
+                </dd>
+                <dt><span>C ODIGOMAP</span></dt>
+                <dd>
+                    <span>{{ aCCENTIDADDVT.cODIGOMAP }}</span>
+                </dd>
+                <dt><span>C ODIGOMEH</span></dt>
+                <dd>
+                    <span>{{ aCCENTIDADDVT.cODIGOMEH }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/accentidaddvt', aCCENTIDADDVT.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span>Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

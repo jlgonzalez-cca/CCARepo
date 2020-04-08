@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    
+    <!--
+        Added the entity ACCENTIDADDF.
+    -->
+    <changeSet id="20200408080200-1" author="jhipster">
+        <createTable tableName="accentidaddf">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="i_dentidad" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="n_ombre" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="f_echaconstitucion" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="f_echaextincion" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="d_omicilio" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="c_odigopostal" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="t_elefono" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="e_mail" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="d_eu" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="f_echaaltaapp" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="f_echabajaapp" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="f_echaaltacenso" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="f_echabajacenso" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="n_umeroversion" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="f_echaversion" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="identidad_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="identidad_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here, do not remove-->
+        </createTable>
+    </changeSet>
+
+    <changeSet id="20200408080200-1-relations" author="jhipster">
+
+    </changeSet>
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here, do not remove-->
+
+    <!--
+        Load sample data generated with Faker.js
+        - This data can be easily edited using a CSV editor (or even MS Excel) and
+          is located in the 'src/main/resources/config/liquibase/fake-data' directory
+        - By default this data is applied when running with the JHipster 'dev' profile.
+          This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
+          Spring Boot configuration key.
+    -->
+    <changeSet id="20200408080200-1-data" author="jhipster" context="faker">
+        <loadData
+                  file="config/liquibase/fake-data/accentidaddf.csv"
+                  separator=";"
+                  tableName="accentidaddf">
+            <column name="id" type="numeric"/>
+            <column name="i_dentidad" type="numeric"/>
+            <column name="n_ombre" type="string"/>
+            <column name="f_echaconstitucion" type="date"/>
+            <column name="f_echaextincion" type="date"/>
+            <column name="d_omicilio" type="string"/>
+            <column name="c_odigopostal" type="string"/>
+            <column name="t_elefono" type="string"/>
+            <column name="e_mail" type="string"/>
+            <column name="d_eu" type="string"/>
+            <column name="f_echaaltaapp" type="date"/>
+            <column name="f_echabajaapp" type="date"/>
+            <column name="f_echaaltacenso" type="date"/>
+            <column name="f_echabajacenso" type="date"/>
+            <column name="n_umeroversion" type="numeric"/>
+            <column name="f_echaversion" type="date"/>
+            <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here, do not remove-->
+        </loadData>
+    </changeSet>
+
+</databaseChangeLog>
