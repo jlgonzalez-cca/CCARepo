@@ -1,0 +1,54 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="aCCENTIDADPER">
+            <h2><span>ACCENTIDADPER</span> {{ aCCENTIDADPER.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span>I DENTIDAD</span></dt>
+                <dd>
+                    <span>{{ aCCENTIDADPER.iDENTIDAD }}</span>
+                </dd>
+                <dt><span>I DCARGO</span></dt>
+                <dd>
+                    <span>{{ aCCENTIDADPER.iDCARGO }}</span>
+                </dd>
+                <dt><span>N IF</span></dt>
+                <dd>
+                    <span>{{ aCCENTIDADPER.nIF }}</span>
+                </dd>
+                <dt><span>N OMBRE</span></dt>
+                <dd>
+                    <span>{{ aCCENTIDADPER.nOMBRE }}</span>
+                </dd>
+                <dt><span>A PELLIDO 1</span></dt>
+                <dd>
+                    <span>{{ aCCENTIDADPER.aPELLIDO1 }}</span>
+                </dd>
+                <dt><span>A PELLIDO 2</span></dt>
+                <dd>
+                    <span>{{ aCCENTIDADPER.aPELLIDO2 }}</span>
+                </dd>
+                <dt><span>E MAIL</span></dt>
+                <dd>
+                    <span>{{ aCCENTIDADPER.eMAIL }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/accentidadper', aCCENTIDADPER.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span>Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
